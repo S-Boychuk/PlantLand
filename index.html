@@ -4,141 +4,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Nunito:wght@700&family=Work+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Plantku</title>
 </head>
 
 <body>
-    <header>
-        <h1>Plantku Flower Shop</h1> <!--will be hide by styles -->
-        <nav>
-            <a href="./index.html" aria-label="Homepage">#</a>
-            <form role="search" action="#" method="GET">
-                <label for="search-input">Search</label> <!--will be hide by styles -->
-                <input type="search" name="search" id="search-input" placeholder="Search...">
-                <!--input will be hide by styles and appear only on hover -->
-                <button type="submit" aria-label="Search">#</button>
+    <header class="header">
+        <h1 class="visually-hidden">Plantku Flower Shop</h1>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a class="header-logo" href="./index.html" aria-label="Homepage">#</a>
+            <form class="search-form" role="search" action="#" method="GET">
+                <label class="search-form-label" for="search-input">Search</label>
+                <input class="search-form-input" type="search" name="search" id="search-input" placeholder="Search...">
+                <button class="search-form-btn" type="submit" aria-label="Search">#</button>
             </form>
-            <ul>
-                <li><a href="#" aria-label="Shopping cart">#</a></li>
-                <li><a href="#">Sign Up</a></li>
-                <li><a href="#">Sign In</a></li>
+            <ul class="main-nav-list">
+                <li class="main-nav-list-item"><a href="#" aria-label="Shopping cart">#</a></li>
+                <li class="main-nav-list-item"><a href="#">Sign Up</a></li>
+                <li class="main-nav-list-item"><a href="#">Sign In</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
+        <section class="hero">
             <img src="./img/hero-img.jpg" alt="Houseplant" width="608" height="740">
-            <h2>Kembang Flower Mantap</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            <h2 class="hero-title">Kembang Flower Mantap</h2>
+            <p class="hero-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                has been the
                 industry's standard
                 dummy text ever since the 1500s.</p>
-            <button type="button">Previous Kaktus Plant</button>
-            <button type="button">Next Rahasia Plant</button>
+            <button class="hero-btn" type="button">Previous Kaktus Plant</button>
+            <button class="hero-btn" type="button">Next Rahasia Plant</button>
         </section>
-        <section>
-            <h2>Shop Advantages</h2>
-            <ul>
-                <li>
-                    <h3>Fast Delivery</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+        <section class="benefits">
+            <h2 class="benefits-title">Shop Benefits</h2>
+            <ul class="benefits-list">
+                <li class="benefits-list-item">
+                    <h3 class="benefits-list-title">Fast Delivery</h3>
+                    <p class="benefits-list-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been
                         the industry's standard</p>
                 </li>
-                <li>
-                    <h3>Great Customer Service</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                <li class="benefits-list-item">
+                    <h3 class="benefits-list-title">Great Customer Service</h3>
+                    <p class="benefits-list-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been
                         the industry's standard</p>
                 </li>
-                <li>
-                    <h3>Original Plants</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                <li class="benefits-list-item">
+                    <h3 class="benefits-list-title">Original Plants</h3>
+                    <p class="benefits-list-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been
                         the industry's standard</p>
                 </li>
-                <li>
-                    <h3>Affordable Price</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                <li class="benefits-list-item">
+                    <h3 class="benefits-list-title">Affordable Price</h3>
+                    <p class="benefits-list-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been
                         the industry's standard</p>
                 </li>
             </ul>
         </section>
-        <section>
-            <h2>Featured Plants</h2>
-            <label for="sort">Sort by:</label> <!--will be hide -->
-            <select id="sort" name="sort">
-                <option value="popular">Popular</option>
-                <option value="newest">Newest</option>
-                <option value="expensive">Expensive</option>
-                <option value="cheaper" selected>Cheaper</option>
+        <section class="featured-products">
+            <h2 class="featured-products-title">Featured Plants</h2>
+            <label class="visually-hidden" for="sort">Sort by:</label>
+            <select class="featured-products-select" id="sort" name="sort">
+                <option class="featured-products-option" value="popular">Popular</option>
+                <option class="featured-products-option" value="newest">Newest</option>
+                <option class="featured-products-option" value="expensive">Expensive</option>
+                <option class="featured-products-option" value="cheaper" selected>Cheaper</option>
             </select>
-            <ul>
-                <li>
-                    <img src="./img/plant-img-1.jpg" alt="Prickly cactus in a brown pot">
-                    <h3>Kaktus Plants</h3>
-                    <p>IDR 85.000</p>
+            <ul class="featured-products-list">
+                <li class="featured-products-list-item">
+                    <img src="./img/plant-img-1.jpg" alt="Prickly cactus in a brown pot" width="217" height="217">
+                    <h3 class="featured-products-list-title">Kaktus Plants</h3>
+                    <p class="featured-products-list-text">IDR 85.000</p>
                 </li>
-                <li>
-                    <img src="./img/plant-img-2.jpg" alt="Succulent in a beige pot">
-                    <h3>Landak Plants</h3>
-                    <p>IDR 105.000</p>
+                <li class="featured-products-list-item">
+                    <img src="./img/plant-img-2.jpg" alt="Succulent in a beige pot" width="217" height="217">
+                    <h3 class="featured-products-list-title">Landak Plants</h3>
+                    <p class="featured-products-list-text">IDR 105.000</p>
                 </li>
-                <li>
-                    <img src="./img/plant-img-3.jpg" alt="Cactus with spines in a white pot">
-                    <h3>Kecubung Plants</h3>
-                    <p>IDR 85.000</p>
+                <li class="featured-products-list-item">
+                    <img src="./img/plant-img-3.jpg" alt="Cactus with spines in a white pot" width="217" height="217">
+                    <h3 class="featured-products-list-title">Kecubung Plants</h3>
+                    <p class="featured-products-list-text">IDR 85.000</p>
                 </li>
-                <li>
-                    <img src="./img/plant-img-4.jpg" alt="Succulent in a white pot">
-                    <h3>Kecubung Plants</h3>
-                    <p>IDR 85.000</p>
+                <li class="featured-products-list-item">
+                    <img src="./img/plant-img-4.jpg" alt="Succulent in a white pot" width="217" height="217">
+                    <h3 class="featured-products-list-title">Kecubung Plants</h3>
+                    <p class="featured-products-list-text">IDR 85.000</p>
                 </li>
-                <li>
-                    <img src="./img/plant-img-5.jpg" alt="Succulent in a mint pot">
-                    <h3>Kecubung Plants</h3>
-                    <p>IDR 85.000</p>
+                <li class="featured-products-list-item">
+                    <img src="./img/plant-img-5.jpg" alt="Succulent in a mint pot" width="217" height="217">
+                    <h3 class="featured-products-list-title">Kecubung Plants</h3>
+                    <p class="featured-products-list-text">IDR 85.000</p>
                 </li>
             </ul>
         </section>
-        <section>
-            <h2>Buy more plants, it helps you to be relaxed</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida gravida aliquam. Pellentesque et
+        <section class="promo">
+            <h2 class="promo-title">Buy more plants, it helps you to be relaxed</h2>
+            <p class="promo-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida gravida
+                aliquam. Pellentesque et
                 lobortis nisl.
                 Sed et mauris justo. Nulla eu enim non mauris maximus dignissim. Maecenas vitae eros sapien. Quisque
                 pellentesque tempus
                 dignissim.</p>
-            <img src="./img/shop-detailes-img-1-.jpg" alt="Shop corner with a table and a plant">
-            <img src="./img/shop-detailes-img-2.jpg" alt="Shop window with various potted plants">
+            <img src="./img/shop-detailes-img-1-.jpg" alt="Shop corner with a table and a plant" width="568"
+                height="250">
+            <img src="./img/shop-detailes-img-2.jpg" alt="Shop window with various potted plants" width="513"
+                height="610">
         </section>
-        <section>
-            <h2>Get your favourites plant on our shop now</h2>
-            <a href="goods.html">Visit Shop</a>
+        <section class="cta">
+            <h2 class="cta-title">Get your favourites plant on our shop now</h2>
+            <a class="cta-link"></a>href="#">Visit Shop</a>
         </section>
     </main>
-    <footer>
-        <a href="./index.html" aria-label="Homepage">plantku</a>
-        <address>
+    <footer class="footer">
+        <h2 class="visually-hidden">Footer</h2>
+        <a class="footer-logo" href="./index.html">plantku</a>
+        <address class="address">
             Plantku House <br>
-            <a href="https://maps.app.goo.gl/vKj9PZMDtEiQrFjD9" target="_blank" title="Google maps"
-                rel="noopener noreferrer">Jl. Laksda Adisucipto No.51, Demangan,
+            <a class="address-map-link" href="https://maps.app.goo.gl/vKj9PZMDtEiQrFjD9" target="_blank"
+                title="Google maps" rel="noopener noreferrer">Jl. Laksda Adisucipto No.51, Demangan,
                 Kec. Depok, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55282</a>
         </address>
-        <nav aria-label="Shop information">
-            <h3>Information</h3>
-            <ul>
-                <li><a href="#">About Us</a></li>
-                <li> <a href="#">Contact Us </a></li>
+        <nav class="footer-nav" aria-label="Shop information">
+            <h3 class="footer-nav-title">Information</h3>
+            <ul class="footer-nav-list">
+                <li class="footer-nav-list-item"><a href="#">About Us</a></li>
+                <li class="footer-nav-list-item"> <a href="#">Contact Us </a></li>
             </ul>
         </nav>
-        <nav aria-label="Products categories">
-            <h3>Products</h3>
-            <ul>
-                <li> <a href="#">Houseplants</a></li>
-                <li><a href="#">Other</a></li>
+        <nav class="footer-nav" aria-label="Products categories">
+            <h3 class="footer-nav-title">Products</h3>
+            <ul class="footer-nav-list">
+                <li class="footer-nav-list-item"> <a href="#">Houseplants</a></li>
+                <li class="footer-nav-list-item"><a href="#">Other</a></li>
             </ul>
         </nav>
-        <h3>Subscribe to Our Emails</h3>
-        <form action="#" method="post">
-            <label for="email-subscribe">Subscribe to Our Emails</label>
-            <input type="email" id="email-subscribe" name="email-subscribe" placeholder="Enter Email Address" required>
-            <button type="submit">Submit</button>
+        <form class="subscribe-form" action="#" method="post">
+            <label class="subscribe-form-label" for="email-subscribe">Subscribe to Our Emails</label>
+            <input class="subscribe-form-input" type="email" id="email-subscribe" name="email-subscribe"
+                placeholder="Enter Email Address" required>
+            <button class="subscribe-form-btn" type="submit">Submit</button>
         </form>
     </footer>
 </body>
