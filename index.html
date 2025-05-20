@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Nunito:wght@700&family=Work+Sans:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Nunito:wght@700&family=Work+Sans:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>Plantku</title>
@@ -17,69 +17,77 @@
     <header class="header">
         <h1 class="visually-hidden">Plantku Flower Shop</h1>
         <nav class="main-nav" aria-label="Main navigation">
-            <a class="header-logo" href="./index.html" aria-label="Homepage">#</a>
-            <form class="search-form" role="search" action="#" method="GET">
+            <a class="logo link" href="./index.html">plantku</a>
+            <form class="search-form visually-hidden" role="search" action="#" method="GET">
                 <label class="search-form-label" for="search-input">Search</label>
                 <input class="search-form-input" type="search" name="search" id="search-input" placeholder="Search...">
-                <button class="search-form-btn" type="submit" aria-label="Search">#</button>
+                <button class="search-form-btn" type="submit" aria-label="Search"></button>
             </form>
-            <ul class="main-nav-list">
-                <li class="main-nav-list-item"><a href="#" aria-label="Shopping cart">#</a></li>
-                <li class="main-nav-list-item"><a href="#">Sign Up</a></li>
-                <li class="main-nav-list-item"><a href="#">Sign In</a></li>
+            <ul class="main-nav-list list">
+                <li class="main-nav-list-item">
+                    <a class="main-nav-list-link link" href="#" aria-label="Shopping cart"></a>
+                </li>
+                <li class="main-nav-list-item">
+                    <a class="main-nav-list-link link" href="#">Sign Up</a>
+                </li>
+                <li class="main-nav-list-item">
+                    <a class="main-nav-list-link link" href="#">Sign In</a>
+                </li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="hero">
-            <img src="./img/hero-img.jpg" alt="Houseplant" width="608" height="740">
+            <img src="./img/hero-img.jpg" alt="Mint in braun pot" width="608" height="740">
             <h2 class="hero-title">Kembang Flower Mantap</h2>
             <p class="hero-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                has been the
-                industry's standard
-                dummy text ever since the 1500s.</p>
-            <button class="hero-btn" type="button">Previous Kaktus Plant</button>
-            <button class="hero-btn" type="button">Next Rahasia Plant</button>
+                has been the industry's standard dummy text ever since the 1500s.</p>
+            <button class="hero-btn" type="button">
+                <span class="hero-btn-label">Previous</span>
+                <span class="hero-btn-plant-name">Kaktus Plant</span>
+            </button>
+            <button class="hero-btn" type="button">
+                <span class="hero-btn-label">Next</span>
+                <span class="hero-btn-plant-name">Rahasia Plant</span>
+            </button>
         </section>
         <section class="benefits">
-            <h2 class="benefits-title">Shop Benefits</h2>
-            <ul class="benefits-list">
+            <h2 class="visually-hidden ">Shop Benefits</h2>
+            <ul class="benefits-list list">
                 <li class="benefits-list-item">
                     <h3 class="benefits-list-title">Fast Delivery</h3>
                     <p class="benefits-list-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been
-                        the industry's standard</p>
+                        industry. Lorem Ipsum has been the industry's standard</p>
                 </li>
                 <li class="benefits-list-item">
                     <h3 class="benefits-list-title">Great Customer Service</h3>
                     <p class="benefits-list-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been
-                        the industry's standard</p>
+                        industry. Lorem Ipsum has been the industry's standard</p>
                 </li>
                 <li class="benefits-list-item">
                     <h3 class="benefits-list-title">Original Plants</h3>
                     <p class="benefits-list-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been
-                        the industry's standard</p>
+                        industry. Lorem Ipsum has been the industry's standard</p>
                 </li>
                 <li class="benefits-list-item">
                     <h3 class="benefits-list-title">Affordable Price</h3>
                     <p class="benefits-list-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been
-                        the industry's standard</p>
+                        industry. Lorem Ipsum has been the industry's standard</p>
                 </li>
             </ul>
         </section>
         <section class="featured-products">
-            <h2 class="featured-products-title">Featured Plants</h2>
-            <label class="visually-hidden" for="sort">Sort by:</label>
-            <select class="featured-products-select" id="sort" name="sort">
-                <option class="featured-products-option" value="popular">Popular</option>
-                <option class="featured-products-option" value="newest">Newest</option>
-                <option class="featured-products-option" value="expensive">Expensive</option>
-                <option class="featured-products-option" value="cheaper" selected>Cheaper</option>
-            </select>
-            <ul class="featured-products-list">
+            <header class="featured-products-header">
+                <h2 class="featured-products-title">Featured Plants</h2>
+                <label class="visually-hidden" for="sort">Sort by:</label>
+                <select class="featured-products-select" id="sort" name="sort">
+                    <option class="featured-products-option" value="popular">Popular</option>
+                    <option class="featured-products-option" value="newest">Newest</option>
+                    <option class="featured-products-option" value="expensive">Expensive</option>
+                    <option class="featured-products-option" value="cheaper" selected>Cheaper</option>
+                </select>
+            </header>
+            <ul class="featured-products-list list">
                 <li class="featured-products-list-item">
                     <img src="./img/plant-img-1.jpg" alt="Prickly cactus in a brown pot" width="217" height="217">
                     <h3 class="featured-products-list-title">Kaktus Plants</h3>
@@ -122,30 +130,39 @@
         </section>
         <section class="cta">
             <h2 class="cta-title">Get your favourites plant on our shop now</h2>
-            <a class="cta-link"></a>href="#">Visit Shop</a>
+            <a class="cta-link link" href="#">Visit Shop</a>
+            <img src="./img/cta-img.jpg" alt="Houseplant in white pot" width="402" height="360">
         </section>
     </main>
     <footer class="footer">
         <h2 class="visually-hidden">Footer</h2>
-        <a class="footer-logo" href="./index.html">plantku</a>
+        <a class="logo link" href="./index.html">plantku</a>
         <address class="address">
-            Plantku House <br>
-            <a class="address-map-link" href="https://maps.app.goo.gl/vKj9PZMDtEiQrFjD9" target="_blank"
+            <span class="address-name">Plantku House</span> <br>
+            <a class="address-map-link link" href="https://maps.app.goo.gl/vKj9PZMDtEiQrFjD9" target="_blank"
                 title="Google maps" rel="noopener noreferrer">Jl. Laksda Adisucipto No.51, Demangan,
                 Kec. Depok, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55282</a>
         </address>
         <nav class="footer-nav" aria-label="Shop information">
             <h3 class="footer-nav-title">Information</h3>
-            <ul class="footer-nav-list">
-                <li class="footer-nav-list-item"><a href="#">About Us</a></li>
-                <li class="footer-nav-list-item"> <a href="#">Contact Us </a></li>
+            <ul class="footer-nav-list list">
+                <li class="footer-nav-list-item">
+                    <a class="footer-nav-list-link link" href="#">About Us</a>
+                </li>
+                <li class="footer-nav-list-item">
+                    <a class="footer-nav-list-link link" href="#">Contact Us </a>
+                </li>
             </ul>
         </nav>
         <nav class="footer-nav" aria-label="Products categories">
             <h3 class="footer-nav-title">Products</h3>
-            <ul class="footer-nav-list">
-                <li class="footer-nav-list-item"> <a href="#">Houseplants</a></li>
-                <li class="footer-nav-list-item"><a href="#">Other</a></li>
+            <ul class="footer-nav-list list">
+                <li class="footer-nav-list-item">
+                    <a class="footer-nav-list-link link" href="#">Houseplants</a>
+                </li>
+                <li class="footer-nav-list-item">
+                    <a class="footer-nav-list-link link" href="#">Other</a>
+                </li>
             </ul>
         </nav>
         <form class="subscribe-form" action="#" method="post">
