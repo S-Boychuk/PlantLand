@@ -85,8 +85,13 @@ img {
 
 /*-------------------------------------header---------------------------------------------*/
 .header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 	padding: 40px 0;
 }
+
 .main-nav {
 	display: flex;
 	justify-content: space-between;
@@ -108,10 +113,17 @@ img {
 
 .main-nav-list {
 	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.main-nav-list-item:first-child {
+	margin-right: 8px;
 }
 
 .main-nav-list-link {
-	display: inline-block;
+	display: flex;
+	align-items: center;
 	padding: 8px 30px;
 	font-family: var(--primary-nav-font);
 	font-weight: 700;
@@ -127,13 +139,24 @@ img {
 	background-color: var(--accent-color);
 }
 
+.main-nav-icon {
+	fill: transparent;
+	stroke: var(--dark-color);
+}
+
+.main-nav-list-link:hover .main-nav-icon {
+	stroke: var(--light-color);
+}
 /*--------------------------------------hero----------------------------------------------*/
 .hero {
 	padding-bottom: 142px;
 }
 .hero-container {
+	width: 1280px;
+	margin: 0 auto;
 	display: flex;
 	gap: 77px;
+	align-items: flex-end;
 }
 
 .hero-title {
@@ -170,11 +193,18 @@ img {
 }
 
 .hero-btn-label {
+	display: flex;
+	align-items: center;
+	gap: 1.5px;
 	margin-bottom: 12px;
 	font-weight: 500;
 	font-size: 24px;
 	line-height: 1.21;
 	color: rgba(51, 51, 51, 0.5);
+}
+
+.hero-btn-icon {
+	fill: currentColor;
 }
 
 .hero-btn:hover .hero-btn-label,
@@ -211,11 +241,24 @@ img {
 	border: 1px solid var(--border-color);
 }
 
-.benefits-list-title {
+.benefits-header-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 16px;
 	margin-bottom: 16px;
+	max-width: 200px;
+	color: var(--accent-color);
+}
+
+.benefits-icon {
+	flex-shrink: 0;
+	fill: currentColor;
+}
+
+.benefits-list-title {
 	font-size: 16px;
 	line-height: 1.5;
-	color: var(--accent-color);
+	color: currentColor;
 }
 
 .benefits-list-text {
