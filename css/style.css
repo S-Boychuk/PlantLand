@@ -107,10 +107,80 @@ img {
 	line-height: 1;
 	letter-spacing: 0.05em;
 	color: var(--accent-color);
+	transition: text-shadow 0.5s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .logo:hover {
 	text-shadow: var(--shadow-text);
+}
+
+.search-form {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 10px;
+	align-items: end;
+	justify-content: center;
+}
+
+.search-form-input {
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.3s ease;
+	height: 32px;
+	border: 1px solid var(--border-color);
+	border-radius: 2px;
+	transition: box-shadow 0.5s cubic-bezier(0.42, 0, 0.58, 1),
+		border 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.search-form-input::placeholder {
+	font-family: var(--secondary-font);
+	font-size: 12px;
+	color: var(--dark-color);
+	opacity: 0.5;
+}
+
+.search-form:hover .search-form-input {
+	transform: scaleX(1);
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.search-form-input:focus {
+	outline: none;
+	border: 1px solid #156963;
+	box-shadow: var(--shadow-box);
+}
+
+.search-form-btn {
+	display: flex;
+	align-items: center;
+	border: none;
+	background-color: transparent;
+	padding: 8px 30px;
+	transition: background-color 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.search-form:hover .search-form-btn {
+	background-color: var(--accent-color);
+}
+
+.search-form:hover .search-form-btn-icon {
+	stroke: var(--light-color);
+}
+
+.search-form-btn-icon {
+	transition: stroke 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.main-nav > div {
+	display: flex;
+	align-items: flex-start;
+}
+
+.search-form-btn-icon {
+	fill: transparent;
+	stroke: var(--dark-color);
 }
 
 .main-nav-list {
@@ -133,6 +203,8 @@ img {
 	line-height: 1.43;
 	text-align: center;
 	color: var(--accent-color);
+	transition: background-color 0.5s cubic-bezier(0.42, 0, 0.58, 1),
+		color 0.5s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .main-nav-list-link:hover,
@@ -144,6 +216,7 @@ img {
 .main-nav-icon {
 	fill: transparent;
 	stroke: var(--dark-color);
+	transition: stroke 0.5s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .main-nav-list-link:hover .main-nav-icon {
@@ -189,6 +262,7 @@ img {
 
 	border: none;
 	background-color: transparent;
+	transition: background-color 0.5s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .hero-btn:hover,
@@ -205,6 +279,7 @@ img {
 	font-size: 24px;
 	line-height: 1.21;
 	color: rgba(51, 51, 51, 0.5);
+	transition: color 0.5s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .hero-btn-icon {
@@ -221,6 +296,7 @@ img {
 	font-size: 32px;
 	line-height: 1.22;
 	color: var(--accent-color);
+	transition: color 0.5s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .hero-btn:hover .hero-btn-plant-name,
@@ -372,6 +448,7 @@ img {
 	text-align: center;
 	color: #fafefe;
 	background-color: var(--accent-color);
+	transition: box-shadow 0.5s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 /*---------------------------------------footer-----------------------------------------------*/
@@ -425,6 +502,8 @@ img {
 	font-size: 14px;
 	line-height: 1.14;
 	color: inherit;
+	transition: text-shadow 0.5s cubic-bezier(0.42, 0, 0.58, 1),
+		color 0.5s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .footer-nav-list-link:hover {
@@ -448,6 +527,8 @@ img {
 	height: 32px;
 	border: 1px solid var(--border-color);
 	border-radius: 2px;
+	transition: box-shadow 0.5s cubic-bezier(0.42, 0, 0.58, 1),
+		border 0.5s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .subscribe-form-input::placeholder {
@@ -474,4 +555,5 @@ img {
 	text-transform: capitalize;
 	color: var(--light-color);
 	background-color: var(--accent-color);
+	transition: box-shadow 0.5s cubic-bezier(0.42, 0, 0.58, 1);
 }
