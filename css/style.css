@@ -13,6 +13,8 @@
 	--shadow-text: 2px 2px 4px rgba(21, 105, 99, 0.2),
 		-2px 2px 4px rgba(21, 105, 99, 0.2), 2px -2px 4px rgba(21, 105, 99, 0.2),
 		-2px -2px 4px rgba(21, 105, 99, 0.2);
+
+	--transition: 0.5s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 body {
@@ -72,6 +74,13 @@ img {
 	text-decoration: none;
 }
 
+.search-form-input:focus,
+.subscribe-form-input:focus {
+	outline: none;
+	border: 1px solid #156963;
+	box-shadow: var(--shadow-box);
+}
+
 .promo-title,
 .cta-title {
 	font-size: 40px;
@@ -86,11 +95,9 @@ img {
 /*-------------------------------------header---------------------------------------------*/
 .header {
 	position: absolute;
-
 	top: 0;
 	left: 0;
 	width: 100%;
-
 	padding: 40px 0;
 }
 
@@ -107,30 +114,40 @@ img {
 	line-height: 1;
 	letter-spacing: 0.05em;
 	color: var(--accent-color);
-	transition: text-shadow 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+	transition: text-shadow var(--transition);
 }
 
 .logo:hover {
 	text-shadow: var(--shadow-text);
 }
 
+.main-nav > div {
+	display: flex;
+	align-items: flex-start;
+}
+
 .search-form {
 	display: flex;
 	flex-direction: column-reverse;
 	gap: 10px;
-	align-items: end;
+	align-items: flex-end;
 	justify-content: center;
 }
 
 .search-form-input {
-	transform: scaleX(0);
-	transform-origin: left;
-	transition: transform 0.3s ease;
 	height: 32px;
 	border: 1px solid var(--border-color);
 	border-radius: 2px;
-	transition: box-shadow 0.5s cubic-bezier(0.42, 0, 0.58, 1),
-		border 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.3s ease, box-shadow var(--transition),
+		border 0.5s var(--transition);
+}
+
+.search-form:hover .search-form-input {
+	transform: scaleX(1);
+	opacity: 1;
+	pointer-events: auto;
 }
 
 .search-form-input::placeholder {
@@ -140,47 +157,29 @@ img {
 	opacity: 0.5;
 }
 
-.search-form:hover .search-form-input {
-	transform: scaleX(1);
-	opacity: 1;
-	pointer-events: auto;
-}
-
-.search-form-input:focus {
-	outline: none;
-	border: 1px solid #156963;
-	box-shadow: var(--shadow-box);
-}
-
 .search-form-btn {
 	display: flex;
 	align-items: center;
 	border: none;
 	background-color: transparent;
 	padding: 8px 30px;
-	transition: background-color 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+	transition: background-color var(--transition);
 }
 
 .search-form:hover .search-form-btn {
 	background-color: var(--accent-color);
 }
 
-.search-form:hover .search-form-btn-icon {
-	stroke: var(--light-color);
-}
-
-.search-form-btn-icon {
-	transition: stroke 0.5s cubic-bezier(0.42, 0, 0.58, 1);
-}
-
-.main-nav > div {
-	display: flex;
-	align-items: flex-start;
-}
-
-.search-form-btn-icon {
+.search-form-btn-icon,
+.main-nav-icon {
 	fill: transparent;
 	stroke: var(--dark-color);
+	transition: stroke var(--transition);
+}
+
+.search-form:hover .search-form-btn-icon,
+.main-nav-list-link:hover .main-nav-icon {
+	stroke: var(--light-color);
 }
 
 .main-nav-list {
@@ -203,8 +202,7 @@ img {
 	line-height: 1.43;
 	text-align: center;
 	color: var(--accent-color);
-	transition: background-color 0.5s cubic-bezier(0.42, 0, 0.58, 1),
-		color 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+	transition: background-color var(--transition), color var(--transition);
 }
 
 .main-nav-list-link:hover,
@@ -212,30 +210,20 @@ img {
 	color: var(--light-color);
 	background-color: var(--accent-color);
 }
-
-.main-nav-icon {
-	fill: transparent;
-	stroke: var(--dark-color);
-	transition: stroke 0.5s cubic-bezier(0.42, 0, 0.58, 1);
-}
-
-.main-nav-list-link:hover .main-nav-icon {
-	stroke: var(--light-color);
-}
 /*--------------------------------------hero----------------------------------------------*/
 
 .hero-container {
-	width: 1280px;
-	margin: 0 auto;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
 	gap: 77px;
-	align-items: flex-end;
+
+	width: 1280px;
+	margin: 0 auto;
 }
 
 .hero-title {
-	max-width: 523px;
+	max-width: 525px;
 	margin-bottom: 24px;
 	font-weight: 500;
 	font-size: 68px;
@@ -262,7 +250,7 @@ img {
 
 	border: none;
 	background-color: transparent;
-	transition: background-color 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+	transition: background-color var(--transition);
 }
 
 .hero-btn:hover,
@@ -279,7 +267,7 @@ img {
 	font-size: 24px;
 	line-height: 1.21;
 	color: rgba(51, 51, 51, 0.5);
-	transition: color 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+	transition: color var(--transition);
 }
 
 .hero-btn-icon {
@@ -296,7 +284,7 @@ img {
 	font-size: 32px;
 	line-height: 1.22;
 	color: var(--accent-color);
-	transition: color 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+	transition: color var(--transition);
 }
 
 .hero-btn:hover .hero-btn-plant-name,
@@ -327,7 +315,6 @@ img {
 	align-items: center;
 	gap: 16px;
 	margin-bottom: 16px;
-	max-width: 200px;
 	color: var(--accent-color);
 }
 
@@ -366,7 +353,7 @@ img {
 }
 
 .featured-products-list-item {
-	flex-basis: calc(100% - 80px) / 5;
+	flex-basis: calc((100% - 80px) / 5);
 	text-align: center;
 }
 
@@ -448,7 +435,7 @@ img {
 	text-align: center;
 	color: #fafefe;
 	background-color: var(--accent-color);
-	transition: box-shadow 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+	transition: box-shadow var(--transition);
 }
 
 /*---------------------------------------footer-----------------------------------------------*/
@@ -502,8 +489,7 @@ img {
 	font-size: 14px;
 	line-height: 1.14;
 	color: inherit;
-	transition: text-shadow 0.5s cubic-bezier(0.42, 0, 0.58, 1),
-		color 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+	transition: text-shadow var(--transition), color var(--transition);
 }
 
 .footer-nav-list-link:hover {
@@ -527,8 +513,7 @@ img {
 	height: 32px;
 	border: 1px solid var(--border-color);
 	border-radius: 2px;
-	transition: box-shadow 0.5s cubic-bezier(0.42, 0, 0.58, 1),
-		border 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+	transition: box-shadow var(--transition), border var(--transition);
 }
 
 .subscribe-form-input::placeholder {
@@ -536,12 +521,6 @@ img {
 	font-size: 12px;
 	color: var(--dark-color);
 	opacity: 0.5;
-}
-
-.subscribe-form-input:focus {
-	outline: none;
-	border: 1px solid #156963;
-	box-shadow: var(--shadow-box);
 }
 
 .subscribe-form-btn {
@@ -555,5 +534,5 @@ img {
 	text-transform: capitalize;
 	color: var(--light-color);
 	background-color: var(--accent-color);
-	transition: box-shadow 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+	transition: box-shadow var(--transition);
 }
